@@ -7,4 +7,4 @@ before_install:
   - docker build -t m1s4/docker-react -f Dockerfile.dev .
 
 script: 
-  - docker run m1s4/docker-react npm run test -- --coverage
+  - docker run -e CI=true m1s4/docker-react npm run test -- --coverage
